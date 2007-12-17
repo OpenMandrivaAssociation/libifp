@@ -11,7 +11,6 @@ Version: 	%{version}
 Release: 	%mkrel %{release}
 License: 	GPL
 Group: 		System/Libraries
-Buildroot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0: 	%{name}-%{version}.tar.gz
 Patch0:		libifp-1.0.0.2-human-readable.patch
 Patch1:		libifp-1.0.0.2-warn-not-error.patch
