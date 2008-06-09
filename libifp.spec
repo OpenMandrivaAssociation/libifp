@@ -76,8 +76,12 @@ rm -rf %{buildroot}
 install -D -m 0755 %{SOURCE1} %buildroot/sbin/libifp-hotplug
 install -D -m 0644 %{SOURCE2} %buildroot%{_sysconfdir}/udev/rules.d/10-libifp.rules
 
+%if %mdkversion < 200900
 %post -p /sbin/ldconfig -n %{libname}
+%endif
+%if %mdkversion < 200900
 %postun -p /sbin/ldconfig -n %{libname}
+%endif
 
 %clean 
 rm -rf %{buildroot}
