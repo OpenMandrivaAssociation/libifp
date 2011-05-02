@@ -1,6 +1,6 @@
 %define	name	libifp
 %define	version	1.0.0.2
-%define	release	6
+%define	release	7
 
 %define	major	4
 %define	libname	%mklibname ifp %{major}
