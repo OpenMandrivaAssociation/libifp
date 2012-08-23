@@ -99,7 +99,6 @@ rm -rf %{buildroot}
 %files -n %{develname}
 %defattr(-,root,root)
 %{_libdir}/libifp.so
-%{_libdir}/libifp.la
 %{_includedir}/ifp.h
 %{_mandir}/man3/ifp.h.3*
 
