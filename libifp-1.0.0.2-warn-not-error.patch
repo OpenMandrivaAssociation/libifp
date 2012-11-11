@@ -1,0 +1,15 @@
+--- libifp-1.0.0.2/src/comp.c.orig	2007-01-18 20:45:51.000000000 +0100
++++ libifp-1.0.0.2/src/comp.c	2007-01-18 20:46:09.000000000 +0100
+@@ -104,7 +104,11 @@ int ifp_selftest(struct ifp_device * dev
+ 
+     i = ifp_list_dirs(dev, "\\", noop_dir_callbk, &n);
+     if (i) {
+-        ifp_err_i(i, "couldn't get basic directory listing.");
++	/* See Debian bug #331585 -- if this tests fails the user
++	   can't even format the device to fix it. Warn instead. -- piman */
++	n = 0;
++	ifp_wrn("couldn't get basic directory listing.");
++        /* ifp_err_i(i, "couldn't get basic directory listing."); */
+         return i;
+     }
+ 
