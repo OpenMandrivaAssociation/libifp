@@ -105,3 +105,54 @@ rm -rf %{buildroot}
 %files -n %{sdevelname}
 %defattr(-,root,root)
 %{_libdir}/libifp.a
+
+
+%changelog
+* Mon May 02 2011 Oden Eriksson <oeriksson@mandriva.com> 1.0.0.2-7mdv2011.0
++ Revision: 661475
+- mass rebuild
+
+* Sun Nov 28 2010 Oden Eriksson <oeriksson@mandriva.com> 1.0.0.2-6mdv2011.0
++ Revision: 602560
+- rebuild
+
+* Tue Mar 16 2010 Oden Eriksson <oeriksson@mandriva.com> 1.0.0.2-5mdv2010.1
++ Revision: 520871
+- rebuilt for 2010.1
+
+* Thu Oct 08 2009 Götz Waschk <waschk@mandriva.org> 1.0.0.2-4mdv2010.0
++ Revision: 456084
+- rebuild for new libusb.la location
+
+* Wed Sep 02 2009 Christophe Fergeau <cfergeau@mandriva.com> 1.0.0.2-3mdv2010.0
++ Revision: 425569
+- rebuild
+
+* Mon Jun 09 2008 Pixel <pixel@mandriva.com> 1.0.0.2-2mdv2009.1
++ Revision: 217190
+- do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Thu Jun 05 2008 Funda Wang <fwang@mandriva.org> 1.0.0.2-2mdv2009.0
++ Revision: 215218
+- new devel package policy
+- add fedora udev rules
+
+* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 1.0.0.2-1mdv2008.1
++ Revision: 140924
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Thu Jan 18 2007 Per Øyvind Karlsen <pkarlsen@mandriva.com> 1.0.0.2-1mdv2007.0
++ Revision: 110498
+- new release: 1.0.0.2
+  pass --with-libusb to ensure library getting built
+  make ifpline support 'df -h' (P0 from debian)
+  only give warning at read failure to allow for format (P1 from debian)
+- Import libifp
+
+* Sat Aug 06 2005 Per Øyvind Karlsen <pkarlsen@mandriva.com> 1.0.0.1-1mdk
+- initial release (club request)
+
