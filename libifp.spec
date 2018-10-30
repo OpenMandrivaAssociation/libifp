@@ -5,7 +5,7 @@
 Summary:	iRiver driver library
 Name:		libifp
 Version:	1.0.0.2
-Release:	17
+Release:	18
 License:	GPLv2+
 Group:		System/Libraries
 Url:		http://ifp-driver.sourceforge.net/
