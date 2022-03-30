@@ -1,5 +1,8 @@
-%define	major	4
-%define	libname	%mklibname ifp %{major}
+# Work around incomplete debug packages
+%global _empty_manifest_terminate_build 0
+
+%define major 4
+%define libname %mklibname ifp %{major}
 %define devname %mklibname -d ifp
 
 Summary:	iRiver driver library
@@ -66,4 +69,3 @@ install -D -m 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/udev/rules.d/10-libifp.
 %{_libdir}/libifp.so
 %{_includedir}/ifp.h
 %{_mandir}/man3/ifp.h.3*
-
