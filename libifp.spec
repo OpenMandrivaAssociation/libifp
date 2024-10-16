@@ -11,7 +11,7 @@ Version:	1.0.0.2
 Release:	20
 License:	GPLv2+
 Group:		System/Libraries
-Url:		http://ifp-driver.sourceforge.net/
+Url:		https://ifp-driver.sourceforge.net/
 Source0:	%{name}-%{version}.tar.gz
 Source1:	libifp.hotplug
 Source2:	10-libifp.rules
