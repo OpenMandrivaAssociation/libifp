@@ -17,6 +17,11 @@ Source1:	libifp.hotplug
 Source2:	10-libifp.rules
 Patch0:		libifp-1.0.0.2-human-readable.patch
 Patch1:		libifp-1.0.0.2-warn-not-error.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(libusb)
 
 %description
