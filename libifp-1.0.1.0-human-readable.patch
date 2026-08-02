@@ -1,6 +1,6 @@
---- libifp-1.0.0.2/examples/ifpline.c.orig	2007-01-18 20:45:51.000000000 +0100
-+++ libifp-1.0.0.2/examples/ifpline.c	2007-01-18 20:46:09.000000000 +0100
-@@ -42,6 +42,25 @@ static int update_progress(void * contex
+--- libifp-1.0.1.0/examples/ifpline.c.orig
++++ libifp-1.0.1.0/examples/ifpline.c
+@@ -45,6 +45,25 @@
  	return 0;
  }
  
@@ -26,7 +26,7 @@
  int upload(struct ifp_device *dev, int argc, char *argv[]) {
      int retval = 0;
      char ifp_path[IFP_MAXPATHLEN];
-@@ -339,6 +358,29 @@ int ifp_check_connect(struct ifp_device 
+@@ -342,6 +361,29 @@
      return (ifp_battery(dh) >= 0);
  }
  
@@ -56,7 +56,7 @@
  int format_media(struct ifp_device *dev) {
  	int i=0;
  
-@@ -752,12 +794,12 @@ int main(int argc, char **argv)
+@@ -755,12 +797,12 @@
  	is_mc = IS_IFP;
      }
  
@@ -72,7 +72,7 @@
      usb_init();
  
      retval = load_device(dev, is_mc == IS_MC);
-@@ -772,8 +814,7 @@ int main(int argc, char **argv)
+@@ -775,8 +817,7 @@
  	}
  
      } else if (strcmp(cmd, "df") == 0) {
@@ -82,7 +82,7 @@
  
      } else if (strcmp(cmd, "put") == 0) {
  	retval = ifp_put(dev, cur_cnt, cur_arg);
-@@ -900,7 +941,7 @@ void help(char *prog) {
+@@ -903,7 +944,7 @@
      printf("usage: %s command params\n",prog);
      printf("commands:\n");
      printf("    ls [directory]\n");
